@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/automationiberia/umbrella-demo.git
       revision: HEAD
       directories:
-      - path: environments
+      - path: environments/*
   template:
     metadata:
       name: '{{path.basename}}'
