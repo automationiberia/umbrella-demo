@@ -6,6 +6,6 @@ type: application
 version: 0.1.0
 dependencies:
   - name: frontend-nginx
-    version: "0.1.0"
+    version: "^0.1.0"
     repository: "https://silvinux.github.io/helm-tutorial/docs"
 ...
