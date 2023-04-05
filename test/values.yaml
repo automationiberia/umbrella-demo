@@ -1,9 +1,18 @@
-buslog:
-  image:
-    tag: prepForLogic2.0-cc8cef4
-ctrlr:
-  image:
-    tag: ctrlr-update-dockerfile-44ea304
-flask-ui:
-  image:
-    tag: flask-ui-update-color-scheme-e618ff2
+replicaCount: 1
+
+namespace:
+  name: frontend-test
+
+image:
+  repository: nginx
+  tag: "1.16.0"
+  pullPolicy: IfNotPresent
+
+service:
+  name: nginx-service
+  type: ClusterIP
+  port: 80
+  targetPort: 80
+
+env:
+  name: test
