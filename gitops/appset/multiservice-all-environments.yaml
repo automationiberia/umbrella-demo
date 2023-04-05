@@ -14,7 +14,13 @@ spec:
     metadata:
       name: '{{path.basename}}'
     spec:
-      project: default
+      project: example-multiservice
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
       source:
         repoURL: https://github.com/automationiberia/umbrella-demo.git
         targetRevision: HEAD
